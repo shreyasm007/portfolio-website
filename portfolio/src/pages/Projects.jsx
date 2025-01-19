@@ -37,8 +37,8 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Projects</h1>
-        <p className="text-xl text-gray-600">A collection of my development and AI projects</p>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-300">A collection of my development and AI projects</p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,19 +48,19 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
           >
             <div className="p-6">
               <span className={`inline-block px-2 py-1 text-sm rounded-full mb-4 ${
-                project.type === 'AI' ? 'bg-blue-100 text-blue-800' : 'bg-green-100 text-green-800'
+                project.type === 'AI' ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100' : 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100'
               }`}>
                 {project.type}
               </span>
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-sm">
+                  <span key={tag} className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md text-sm">
                     {tag}
                   </span>
                 ))}

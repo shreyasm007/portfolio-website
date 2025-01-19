@@ -30,16 +30,15 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
         className="max-w-3xl mx-auto"
       >
-        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Get in Touch</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">Get in Touch</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Info */}
           <div>
-            <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Contact Information</h2>
             <div className="space-y-4">
               <a 
                 href="mailto:shreyasmohite001@gmail.com"
-                className="flex items-center space-x-3 text-gray-600 hover:text-primary"
+                className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
               >
                 <MailIcon size={20} />
                 <span>shreyasmohite001@gmail.com</span>
@@ -48,14 +47,14 @@ const Contact = () => {
                 href="https://github.com/shreyasm007-leetcode"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-gray-600 hover:text-primary"
+                className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
               >
                 <GithubIcon size={20} />
                 <span>GitHub</span>
               </a>
               <a 
                 href="#linkedin"
-                className="flex items-center space-x-3 text-gray-600 hover:text-primary"
+                className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary"
               >
                 <LinkedinIcon size={20} />
                 <span>LinkedIn</span>
@@ -63,11 +62,10 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Name
                 </label>
                 <input
@@ -76,12 +74,12 @@ const Contact = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white focus:border-primary dark:focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Email
                 </label>
                 <input
@@ -90,12 +88,12 @@ const Contact = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white focus:border-primary dark:focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   Message
                 </label>
                 <textarea
@@ -104,7 +102,7 @@ const Contact = () => {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="mt-1 block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2 text-gray-900 dark:text-white focus:border-primary dark:focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   required
                 ></textarea>
               </div>

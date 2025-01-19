@@ -36,14 +36,13 @@ const Home = () => {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Development Skills */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
         >
-          <h2 className="text-2xl font-bold mb-6 dark:text-white">Development Skills</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Development Skills</h2>
           <div className="space-y-4">
             {skills.development.map((skill) => (
               <div key={skill.name}>
@@ -64,14 +63,13 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* AI Skills */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm"
         >
-          <h2 className="text-2xl font-bold mb-6 dark:text-white">AI & ML Skills</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">AI & ML Skills</h2>
           <div className="space-y-4">
             {skills.ai.map((skill) => (
               <div key={skill.name}>
